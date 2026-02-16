@@ -1,80 +1,163 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-    <script src="https://kit.fontawesome.com/5fd58ef36e.js" crossorigin="anonymous"></script>
-    <meta http-equiv="x-ua compatible" content="IE-edge">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGENDAMENTO</title>
-    <link rel="shortcut icon" href="img/icon.png">
-    <link rel="stylesheet" href="style.css">
-   
+    <title>Barbearia Tavares | Agendamento Online</title>
+    <meta name="description" content="Agende seu corte com os melhores profissionais na Barbearia Tavares. Escolha seu barbeiro e reserve seu horário.">
     
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     
+    <style>
+        :root {
+            --gold: #d4af37;
+            --dark: #0a0a0a;
+            --card-bg: #1a1a1a;
+            --text: #ffffff;
+            --gray: #a0a0a0;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--dark);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
+
+        /* Header */
+        header {
+            background: rgba(0,0,0,0.9);
+            padding: 20px 5%;
+            text-align: center;
+            border-bottom: 2px solid var(--gold);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo { font-size: 2rem; color: var(--gold); font-weight: bold; }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 5%;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&q=80&w=1470') no-repeat center center/cover;
+        }
+
+        .hero h1 { font-size: 3.5rem; margin-bottom: 10px; }
+        .hero p { color: var(--gold); font-size: 1.2rem; margin-bottom: 30px; }
+
+        /* Seção Barbeiros */
+        .barbers-section { padding: 80px 5%; text-align: center; }
+        .barbers-section h2 { font-size: 2.5rem; margin-bottom: 40px; color: var(--gold); }
+
+        .barbers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .barber-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+
+        .barber-card:hover { border-color: var(--gold); transform: translateY(-10px); }
+
+        .barber-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--gold);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        .barber-card h3 { margin-bottom: 10px; font-size: 1.5rem; }
+        .barber-card p { color: var(--gray); margin-bottom: 20px; font-size: 0.9rem; }
+
+        .btn-schedule {
+            display: inline-block;
+            padding: 12px 25px;
+            background: var(--gold);
+            color: #000;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-schedule:hover { background: #fff; }
+
+        /* Footer */
+        footer {
+            padding: 50px 5%;
+            background: #000;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+
+        .contact-info { margin-bottom: 20px; color: var(--gray); }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+        }
+    </style>
 </head>
-
 <body>
-  <header>
-    <div class="container">
-        <div class="logo"><img src="img/logo.png" alt="" srcset="">
-        </div>
+
+    <header>
+        <div class="logo">TAVARES BARBEARIA</div>
+    </header>
+
+    <section class="hero">
+        <h1>RESPEITO À SUA BARBA</h1>
+        <p>Escolha seu profissional e agende em segundos.</p>
+    </section>
+
+    <section class="barbers-section">
+        <h2>Nossos Barbeiros</h2>
         
-        <div class="menu">
+        <div class="barbers-grid">
+            <div class="barber-card">
+                <img src="https://i.pravatar.cc/150?u=1" alt="Barbeiro 1" class="barber-img">
+                <h3>Mestre Tavares</h3>
+                <p>Especialista em barba clássica e navalha quente. 15 anos de experiência.</p>
+                <a href="SEU_LINK_AGENDA_1" target="_blank" class="btn-schedule">AGENDAR COM TAVARES</a>
+            </div>
 
-            <nav><h2>
-                <a href="index.html">INICIO</a>
-                <a href="agendamento.html">AGENDAMENTO</a>
-                <a href="sobre.html">SOBRE</a>
-                </h2></nav>
+            <div class="barber-card">
+                <img src="https://i.pravatar.cc/150?u=2" alt="Barbeiro 2" class="barber-img">
+                <h3>Ricardo "Degradê"</h3>
+                <p>O rei do freestyle e cortes modernos. Especialista em degradê americano.</p>
+                <a href="SEU_LINK_AGENDA_2" target="_blank" class="btn-schedule">AGENDAR COM RICARDO</a>
+            </div>
+
+            <div class="barber-card">
+                <img src="https://i.pravatar.cc/150?u=3" alt="Barbeiro 3" class="barber-img">
+                <h3>Lucas Barber</h3>
+                <p>Cortes sociais e infantis com rapidez e precisão. Perfeito para o dia a dia.</p>
+                <a href="SEU_LINK_AGENDA_3" target="_blank" class="btn-schedule">AGENDAR COM LUCAS</a>
+            </div>
         </div>
+    </section>
 
-
-    </div>
-</header>    
-
-
-<div class="space"></div>
-
-<div id="container" style=" display: flex;
-justify-content: center;">
-
-<div class="mensagem-box1">
-  <p style="color: aliceblue;">VICTOR</p>
-  <a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2frvYxh4mD10UnEVUxkRY5RwVR_QI_BJgpcVgCL5Zi6k6qYosPzO1HzhL4xe_iSQqzgSmLKjan?gv=true"><img src="img/victorbg.png" ></a href>
- 
-</div>
-
-<div class="mensagem-box2" >
-  <p style="color: aliceblue;">Uanderson</p>
-  <a href="https://calendar.app.google/VDoCvJFfsKs1H3JTA"><img src="img/uanderson.png" alt="imagem">
-  </a>
-  
-</div>
-
-<!--
-<div class="mensagem-box3">
-  <p style="color: aliceblue;">BREVE</p>
-  <a href="AGENDA#"><img src="img/barbeirobg.png" alt="imagem">
-  </a>
-</div>
--->
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-</div>
-
-
-
+    <footer>
+        <div class="contact-info">
+            <p>📍 Rua da Barbearia, 123 - Centro</p>
+            <p>📞 (11) 99999-9999</p>
+        </div>
+        <p>&copy; 2026 Barbearia Tavares. Todos os direitos reservados.</p>
+    </footer>
 
 </body>
 </html>
